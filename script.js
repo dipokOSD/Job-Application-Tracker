@@ -71,13 +71,18 @@ document.getElementById("all-jobs-cards").addEventListener("click",function(even
     const status=card.querySelector(".status")
     
 
+
    if(clickedElement.classList.contains("interviwe")){
     
     iterviweContainar.appendChild(card)
+     status.classList.remove("text-red-500", "border-red-500");
+        status.classList.add("text-green-500", "border-green-500");
     status.innerText="Interviwed";
    }
    if(clickedElement.classList.contains("rejected")){
     rejectContainar.appendChild(card)
+    status.classList.remove("text-green-500", "border-green-500");
+        status.classList.add("text-red-500", "border-red-500");
      status.innerText="Rejected";
    }
    if(clickedElement.classList.contains("delete")){
